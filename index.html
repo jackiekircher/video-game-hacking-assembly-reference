@@ -7,7 +7,8 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+		<link rel="stylesheet" href="css/theme/custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +25,79 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <!-- hex and bits -->
+				<section>
+          <h1>Reading Memory</h1>
+          <section>
+            <h2>Bits and Hex</h2>
+            <p>Memory is stored in bits, which can be either 0 or 1. However, this creates really long numbers that look like '10011001101011100111011011101100' which can be hard to interpret.</p>
+          </section>
+        </section>
+
+        <!-- bytes vs words -->
+				<section>
+        </section>
+
+        <!-- pointers -->
+				<section>
+        </section>
+
+        <!-- registers -->
+				<section>
+          <!-- general purpose -->
+          <section>
+          </section>
+        </section>
+
+        <!-- what is an assembly instruction -->
+				<section>
+          <!-- binary to instruction -->
+          <section>
+          </section>
+
+          <!-- arguments -->
+          <section>
+          </section>
+        </section>
+
+        <!-- need-to-know x86 instructions -->
+				<section>
+          <code class="x86-asm">add </code>
+          <code class="x86-asm">mov</code>
+          <code class="x86-asm">cmp</code>
+          <code class="x86-asm">jmp</code>
+          <code class="x86-asm">call</code>
+
+          <!-- jumps -->
+          <section>
+          </section>
+        </section>
+
+        <!-- an example: breaking down code -->
+				<section>
+        </section>
+
+        <!-- references -->
+				<section>
+          <h1>References</h1>
+          <ul class="references">
+            <li>
+              <a href="https://www.nostarch.com/gamehacking">"Game Hacking - Developing Autonomous Bots for Online Games" by Nick Cano</a>
+            </li>
+            <li>
+              <a href="http://x86.renejeschke.de">x86 Instruction Set Reference</a>
+            </li>
+            <li>
+              <a href="http://wiki.cheatengine.org/index.php">Cheat Engine Wiki</a>
+            </li>
+            <li>
+              <a href="http://forum.cheatengine.org/viewtopic.php?t=579440">Rydian's Guide To Custom Trainers</a>
+            </li>
+            <li>
+              <a href="http://lua-users.org/wiki/TutorialDirectory">Lua Tutorials</a>
+            </li>
+          </ul>
+        </section>
 			</div>
 		</div>
 
@@ -36,6 +108,8 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+
+        transition: 'fade',
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
