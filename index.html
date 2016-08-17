@@ -134,8 +134,35 @@
 
         <!-- registers -->
 				<section>
-          <!-- general purpose -->
+          <h1 class="small-header">Registers</h1>
+
+          <!-- what's a regiater -->
           <section>
+            <p>In assembly code you can't save values to variables, so arguments to functions are stored and passed around in registers.</p>
+            <p class="spaced-out">What's a register? It's a piece of memory that's only big enough to store 4 bytes of data, but the processor can access it <b>really</b> quickly.</p>
+          </section>
+
+          <!-- register names -->
+          <section>
+            <p>In x86 architecture, there are 8 usable registers.</p>
+            <ul class="registers">
+              <li class="register">EAX</li>
+              <li class="register">EBX</li>
+              <li class="register">ECX</li>
+              <li class="register">EDX</li>
+            </ul>
+            <ul class="registers">
+              <li class="register">EDI</li>
+              <li class="register">ESI</li>
+              <li class="register">ESP</li>
+              <li class="register">EBP</li>
+            </ul>
+            <p class="fragment highlight-registers">... but most instructions will only involve these four.</p>
+          </section>
+
+          <section>
+            <p>Most registers have a special function, so you'll see them used in consistent ways across different programs.</p>
+            <p class="spaced-out fragment">For example, <code>EAX</code> is optimized for calculations, while <code>ESP</code> is used to reference the top of the stack.</p>
           </section>
         </section>
 
