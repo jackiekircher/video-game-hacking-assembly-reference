@@ -27,11 +27,101 @@
 			<div class="slides">
         <!-- hex and bits -->
 				<section>
-          <h1>Reading Memory</h1>
+          <h1 class="small-header">Reading Memory</h1>
           <section>
             <h2>Bits and Hex</h2>
-            <p>Memory is stored in bits, which can be either 0 or 1. However, this creates really long numbers that look like '10011001101011100111011011101100' which can be hard to interpret.</p>
+            <p>Memory is stored in bits, which can be either 0 or 1 (Binary)</p>
+            <p>Hex is a number system based on 16, so values can be 0-9, or A-F (10-15).</p>
+            <p>Why use hex? It's easier to parse and it's simple to convert it to binary, unlike decimal.</p>
           </section>
+          <section>
+            <h2>Converting Hex to Binary</h2>
+            <p>In binary, the number 15 is represented as 1111</p>
+            <div class="bits">
+              <span class="bit">1</span>
+              <span class="bit">1</span>
+              <span class="bit">1</span>
+              <span class="bit">1</span>
+              <div class="caption fragment">
+                8 + 4 + 2 + 1 = 15
+              </div>
+            </div>
+            <p class="fragment spaced-out">In hex, the number 15 if represented by F</p>
+            <div class="bits fragment">
+              <span class="bit">F</span>
+            </div>
+          </section>
+
+          <section>
+            <p>By splitting up binary into groups of 4, you can convert that group into hex by adding the values of the bits</p>
+            <div class="consecutive-bits">
+              <div class="bits">
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <div class="caption">
+                  8 + 4 + 2 + 1
+                </div>
+                <div class="caption center">
+                  = 15
+                </div>
+              </div>
+              <div class="bits">
+                <span class="bit">0</span>
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <div class="caption">
+                  0 + 4 + 2 + 1
+                </div>
+                <div class="caption center">
+                  = 7
+                </div>
+              </div>
+              <div class="bits">
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">1</span>
+                <span class="bit">0</span>
+                <div class="caption">
+                  0 + 0 + 2 + 0
+                </div>
+                <div class="caption center">
+                  = 2
+                </div>
+              </div>
+              <div class="bits">
+                <span class="bit">1</span>
+                <span class="bit">0</span>
+                <span class="bit">1</span>
+                <span class="bit">0</span>
+                <div class="caption">
+                  8 + 0 + 2 + 0
+                </div>
+                <div class="caption center">
+                  = 10
+                </div>
+              </div>
+            </div>
+            <div class="fragment">
+              <p class="spaced-out">... and then converting each value into hex</p>
+              <div class="bits">
+                <span class="bit">F</span>
+                <span class="bit">7</span>
+                <span class="bit">2</span>
+                <span class="bit">A</span>
+                <div class="caption hex">
+                  15 &nbsp;&nbsp;7 &nbsp;&nbsp;&nbsp;2 &nbsp;&nbsp;10
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="notes">
+            <p>Memory is stored in bits, which can be either 0 or 1. However, this creates really long numbers that look like '10011001101011100111011011101100' which can be hard to interpret. This is called 'Binary'</p>
+            <p>'Hex' is a number system that shortens these numbers and makes them easier to read. Its biggest strength is that it's easy to convert between hex and binary.</p>
+          </aside>
         </section>
 
         <!-- bytes vs words -->

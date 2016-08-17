@@ -7,12 +7,58 @@
   font-size: 2.2em;
   border-bottom: 1px solid #8b743d;
   margin-bottom: 1em; }
+  .reveal h1.small-header {
+    font-size: 1.4em;
+    text-align: left; }
 
 .reveal h2 {
-  font-size: 1.9em; }
+  font-size: 1.6em; }
+
+.reveal .spaced-out {
+  margin-top: 1em; }
 
 .reveal .references {
   list-style: none;
   font-size: 0.9em; }
   .reveal .references li {
     margin-bottom: 0.5em; }
+
+.reveal .bits {
+  display: inline-block;
+  text-align: left;
+  margin-top: 1em; }
+  .reveal .bits .bit {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-left: -0.3em;
+    padding: 0 0.4em;
+    border: 1px solid black;
+    border-left: none; }
+    .reveal .bits .bit:first-child {
+      border-left: 1px solid black; }
+  .reveal .bits .caption {
+    font-size: 0.9em;
+    padding-left: 0.2em;
+    text-align: left; }
+    .reveal .bits .caption.center {
+      padding-left: 0;
+      text-align: center; }
+    .reveal .bits .caption.hex {
+      margin-left: -0.3em; }
+
+.reveal .consecutive-bits .bits {
+  display: inline-block;
+  margin-left: -0.3em;
+  padding-left: 0.3em;
+  padding-top: 0.6em;
+  padding-bottom: 0.3em;
+  margin-top: -0.3em;
+  border-left: 1px dashed black; }
+  .reveal .consecutive-bits .bits:first-child {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: none; }
+    .reveal .consecutive-bits .bits:first-child .bit:first-child {
+      border-left: 1px solid black; }
+  .reveal .consecutive-bits .bits .bit:first-child {
+    border-left: none; }
