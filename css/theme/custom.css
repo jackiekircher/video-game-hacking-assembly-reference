@@ -20,6 +20,9 @@
 .reveal .spaced-out {
   margin-top: 1em; }
 
+.reveal .center {
+  text-align: center; }
+
 .reveal .in-place-fragments {
   position: relative;
   height: 2em; }
@@ -34,9 +37,17 @@
     margin-bottom: 0.5em; }
 
 .reveal .bits {
+  position: relative;
   display: inline-block;
   text-align: left;
   margin-top: 0.5em; }
+  .reveal .bits.bits-pointer {
+    margin-right: 2.1em; }
+  .reveal .bits .pointer {
+    position: absolute;
+    right: -1.2em;
+    top: -0.2em;
+    font-size: 1.5em; }
   .reveal .bits .bit {
     display: inline-block;
     font-size: 1.1em;

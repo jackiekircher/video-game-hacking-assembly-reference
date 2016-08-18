@@ -130,6 +130,83 @@
 
         <!-- pointers -->
 				<section>
+          <h1 class="small-header">Pointers</h1>
+          <section>
+            <p>A pointer is a piece of memory that holds the address of a value, and not the value itself.</p>
+            <div class="bits bits-pointer">
+              <span class="bit">07</span>
+              <span class="bit">1C</span>
+              <span class="bit">00</span>
+              <span class="bit">00</span>
+              <div class="caption center">
+                Value of pointer:
+              </div>
+              <div class="caption center">
+                071C0000
+              </div>
+              <div class="pointer">&rarr;</div>
+            </div>
+            <div class="bits">
+              <span class="bit">00</span>
+              <span class="bit">00</span>
+              <span class="bit">00</span>
+              <span class="bit">A0</span>
+              <div class="caption center">
+                Value at 071C0000:
+              </div>
+              <div class="caption center">
+                A0
+              </div>
+            </div>
+            <p class="fragment spaced-out">This can be useful when a program is not sure what the actual address of a value will be until runtime.</p>
+          </section>
+
+          <section>
+            <p>Sometimes pointers hold the addresses of other pointers. These are called pointer chains.</p>
+            <div class="bits bits-pointer">
+              <span class="bit">07</span>
+              <span class="bit">1C</span>
+              <span class="bit">00</span>
+              <span class="bit">00</span>
+              <div class="caption center">
+                Value of pointer:
+              </div>
+              <div class="caption center">
+                071C0000
+              </div>
+              <div class="pointer">&rarr;</div>
+            </div>
+            <div class="bits bits-pointer">
+              <span class="bit">14</span>
+              <span class="bit">55</span>
+              <span class="bit">F0</span>
+              <span class="bit">08</span>
+              <div class="caption center">
+                Value of pointer:
+              </div>
+              <div class="caption center">
+                1455F008
+              </div>
+              <div class="pointer">&rarr;</div>
+            </div>
+            <div class="bits">
+              <span class="bit">00</span>
+              <span class="bit">00</span>
+              <span class="bit">10</span>
+              <span class="bit">FF</span>
+              <div class="caption center">
+                Value at 1455F008:
+              </div>
+              <div class="caption center">
+                10FF
+              </div>
+            </div>
+          </section>
+
+          <aside class="notes">
+            <p>When browsing memory, most of the values you find will be dynamically allocated. This means that they'll be at different addresses everytime you restart the program.</p>
+            <p>The program keeps track of where these dynamic addresses are by using pointers.</p>
+          </aside>
         </section>
 
         <!-- registers -->
