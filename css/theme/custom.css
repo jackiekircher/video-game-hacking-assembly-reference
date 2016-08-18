@@ -144,3 +144,20 @@
     padding-left: 2em;
     margin-top: 0;
     margin-bottom: 0; }
+
+.reveal .instruction {
+  text-align: left;
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  overflow: auto; }
+  .reveal .instruction:nth-child(2n+1) {
+    background: rgba(0, 0, 0, 0.1); }
+  .reveal .instruction p {
+    display: inline-block;
+    float: right;
+    width: 50%;
+    margin: 0; }
+  .reveal .instruction code {
+    display: inline-block;
+    float: left;
+    width: 50%; }

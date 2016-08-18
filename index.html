@@ -260,44 +260,108 @@
 
         <!-- need-to-know x86 instructions -->
 				<section>
+          <h1 class="small-header">Need to Know Instructions</h1>
+
+          <!-- arithmetic -->
           <section>
-            <code class="x86-asm">add </code>
-            <code class="x86-asm">mov</code>
-            <code class="x86-asm">cmp</code>
-            <code class="x86-asm">jmp</code>
-            <code class="x86-asm">call</code>
+            <h2>Arithmetic</h2>
+            <div class="instruction">
+             <code>INC operand</code>operand += 1
+            </div>
+            <div class="instruction">
+              <code>DEC operand</code>operand -= 1
+            </div>
+            <div class="instruction">
+              <code>NOT operand</code>negates each bit in operand
+            </div>
+            <div class="instruction">
+              <code>ADD destination, source</code>destination += source
+            </div>
+            <div class="instruction">
+              <code>SUB destination, source</code>destination -= source
+            </div>
+            <div class="instruction">
+              <code>AND destination, source</code>destination &= source
+            </div>
+            <div class="instruction">
+              <code>OR destination, source</code>destination |= source
+            </div>
           </section>
 
+          <!-- memory management -->
+          <section>
+            <h2>Memory Management</h2>
+            <div class="instruction">
+              <code>MOV destination, operand</code>copies operand value to destination
+            </div>
+            <div class="instruction">
+              <code>CMP value1, value2</code>
+              <p>compares value1 to value2 (<, =, >) without modifying either</p>
+            </div>
+            <div class="instruction">
+              <code>PUSH operand</code>
+              <p>places operand value on top of stack</p>
+            </div>
+            <div class="instruction">
+              <code>POP destination</code>
+              <p>removes value on top of stack and copies it to destination</p>
+            </div>
+            <div class="instruction">
+              <code>CALL operand</code>calls a subroutine at address or label
+            </div>
+          </section>
 
           <!-- jumps -->
           <section>
+            <h2>Jumps</h2>
+            <div class="instruction">
+              <code>JMP destination</code>jumps execution to address or label
+            </div>
+            <div class="instruction">
+              <code>JE destination</code>jumps if previous CMP was equal
+            </div>
+            <div class="instruction">
+              <code>JNE destination</code>
+              <p>jumps if previous CMP was not equal</p>
+            </div>
+            <div class="instruction">
+              <code>JG destination</code>
+              <p>jumps if previous CMP determined value1 > value2</p>
+            </div>
+            <div class="instruction">
+              <code>JL destination</code>
+              <p>jumps if previous CMP determined value1 < value2</p>
+            </div>
           </section>
         </section>
 
-        <!-- an example: breaking down code -->
+        <!-- an example: breaking down code
 				<section>
         </section>
+        -->
 
         <!-- references -->
 				<section>
-          <h1>References</h1>
-          <ul class="references">
-            <li>
-              <a href="https://www.nostarch.com/gamehacking">"Game Hacking - Developing Autonomous Bots for Online Games" by Nick Cano</a>
-            </li>
-            <li>
-              <a href="http://x86.renejeschke.de">x86 Instruction Set Reference</a>
-            </li>
-            <li>
-              <a href="http://wiki.cheatengine.org/index.php">Cheat Engine Wiki</a>
-            </li>
-            <li>
-              <a href="http://forum.cheatengine.org/viewtopic.php?t=579440">Rydian's Guide To Custom Trainers</a>
-            </li>
-            <li>
-              <a href="http://lua-users.org/wiki/TutorialDirectory">Lua Tutorials</a>
-            </li>
-          </ul>
+          <h1 class="small-header">References</h1>
+          <section>
+            <ul class="references">
+              <li>
+                <a href="https://www.nostarch.com/gamehacking">"Game Hacking - Developing Autonomous Bots for Online Games" by Nick Cano</a>
+              </li>
+              <li>
+                <a href="http://x86.renejeschke.de">x86 Instruction Set Reference</a>
+              </li>
+              <li>
+                <a href="http://wiki.cheatengine.org/index.php">Cheat Engine Wiki</a>
+              </li>
+              <li>
+                <a href="http://forum.cheatengine.org/viewtopic.php?t=579440">Rydian's Guide To Custom Trainers</a>
+              </li>
+              <li>
+                <a href="http://lua-users.org/wiki/TutorialDirectory">Lua Tutorials</a>
+              </li>
+            </ul>
+          </section>
         </section>
 			</div>
 		</div>
