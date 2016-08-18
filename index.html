@@ -180,10 +180,78 @@
           <!-- binary to instruction -->
           <section>
             <p>So, how can you read this code?</p>
+            <div class="fragment">
+              <p>Each instruction is a direct translation of bits in memory</p>
+              <div class="bits bits-small">
+                <span class="bit">1</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <span class="bit">1</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">1</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">1</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+                <span class="bit">0</span>
+              </div>
+            </div>
+            <div class="in-place-fragments">
+              <div class="fragment current-visible highlight-bits opcode">
+                <p>These bits indicate this an add instruction, adding a constant to a register.</p>
+              </div>
+              <div class="fragment current-visible highlight-bits register">
+                <p>These bits indicate which register is being added to.</p>
+              </div>
+              <div class="fragment highlight-bits constant">
+                <p>And these bits are the value being added.</p>
+              </div>
+            </div>
+            <div class="fragment spaced-out">
+              <p>Based on the bits, the computer will translate them into an instruction.</p>
+              <code>add ESP, 08</code>
+            </div>
           </section>
+
+          <!-- operands
+          <section>
+          </section>
+          -->
 
           <!-- arguments -->
           <section>
+            <p class="small">There are 4 ways to provide arguments to assembly instructions:</p>
+            <ul class="arguments">
+              <li class="argument">
+                <code>add EAX, <span class="highlight-code">1</span></code>
+                <p class="description">constants - these can be addresses or values of any type.</p>
+              </li>
+              <li class="argument">
+                <code>add EAX, <span class="highlight-code">EBX</span></code>
+                <p class="description">registers - the value currently in register EBX is used.</p>
+              </li>
+              <li class="argument">
+                <code>add EAX, <span class="highlight-code">[EBX]</span></code>
+                <p class="description">addressing - the value in memory at the address in register EBX is used.</p>
+              </li>
+              <li class="argument">
+                <code>add EAX, <span class="highlight-code">[EBX+C]</span></code>
+                <p class="description">address displacement - add C to the address in register EBX and use what is stored in memory there.</p>
+              </li>
+            </ul>
           </section>
 
           <aside class="notes">
