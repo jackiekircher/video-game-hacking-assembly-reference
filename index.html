@@ -53,7 +53,7 @@
           </section>
 
           <section>
-            <p>By splitting up binary into groups of 4, you can convert that group into hex by adding the values of the bits</p>
+            <p>By splitting up binary into groups of 4 bits, you can convert that group into hex by adding the values of the bits ...</p>
             <div class="consecutive-bits">
               <div class="bits">
                 <span class="bit">1</span>
@@ -105,7 +105,7 @@
               </div>
             </div>
             <div class="fragment">
-              <p class="spaced-out">... and then converting each value into hex</p>
+              <p class="spaced-out">... and then joining them back together.</p>
               <div class="bits">
                 <span class="bit">F</span>
                 <span class="bit">7</span>
@@ -216,7 +216,7 @@
           <!-- what's a regiater -->
           <section>
             <p>In assembly code you can't save values to variables, so arguments to functions are stored and passed around in registers.</p>
-            <p class="spaced-out">What's a register? It's a piece of memory that's only big enough to store 4 bytes of data, but the processor can access it <b>really</b> quickly.</p>
+            <p class="spaced-out">What's a register? It's a special piece of memory that's only big enough to store 4 bytes of data, but the processor can access it <b>really</b> quickly.</p>
           </section>
 
           <!-- register names -->
@@ -250,13 +250,13 @@
           <!-- overview -->
           <section>
             <p>Assembly code is a list of instructions that tell the computer exactly what it needs to do to complete a program.</p>
-            <p class="fragment spaced-out">It can be hard to follow because it deals directly with moving data from memory into registers and back, as well as managing stack operations and system calls.</p>
-            <p class="fragment spaced-out">However, each instruction is relatively simple to understand.</p>
+            <p class="fragment spaced-out">Each instruction is very specific, and only only has a few operands.</p>
+            <p class="fragment spaced-out">Taken one step at a time, it's possible to follow the code exactly as the computer would execute it.</p>
           </section>
 
           <!-- binary to instruction -->
           <section>
-            <p>So, how can you read this code?</p>
+            <p>So, how do bytes in memory become code?</p>
             <div class="fragment">
               <p>Each instruction is a direct translation of bits in memory</p>
               <div class="bits bits-small">
@@ -313,19 +313,19 @@
             <p class="small">There are 4 ways to provide arguments to assembly instructions:</p>
             <ul class="arguments">
               <li class="argument">
-                <code>add EAX, <span class="highlight-code">1</span></code>
+                <code>add EAX,<span class="highlight-code">1</span></code>
                 <p class="description">constants - these can be addresses or values of any type.</p>
               </li>
               <li class="argument">
-                <code>add EAX, <span class="highlight-code">EBX</span></code>
+                <code>add EAX,<span class="highlight-code">EBX</span></code>
                 <p class="description">registers - the value currently in register EBX is used.</p>
               </li>
               <li class="argument">
-                <code>add EAX, <span class="highlight-code">[EBX]</span></code>
+                <code>add EAX,<span class="highlight-code">[EBX]</span></code>
                 <p class="description">addressing - the value in memory at the address in register EBX is used.</p>
               </li>
               <li class="argument">
-                <code>add EAX, <span class="highlight-code">[EBX+C]</span></code>
+                <code>add EAX,<span class="highlight-code">[EBX+C]</span></code>
                 <p class="description">address displacement - add C to the address in register EBX and use what is stored in memory there.</p>
               </li>
             </ul>
