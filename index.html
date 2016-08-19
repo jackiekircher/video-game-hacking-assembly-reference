@@ -30,29 +30,34 @@
           <h1 class="small-header">Reading Memory</h1>
           <section>
             <h2>Bits and Hex</h2>
+          </section>
+
+          <section>
             <p>Memory is stored in bits, which can be either 0 or 1 (Binary)</p>
-            <p>Hex is a number system based on 16, so values can be 0-9, or A-F (10-15).</p>
-            <p>Why use hex? It's easier to parse and it's simple to convert it to binary, unlike decimal.</p>
+            <p class="fragment spaced-out">Hex is a number system based on 16, so values can be 0-9, or A-F (10-15).</p>
+            <p class="fragment spaced-out">Why use hex? It's easier to parse and it's simple to convert it to binary, unlike decimal.</p>
           </section>
           <section>
             <h2>Converting Hex to Binary</h2>
             <p>In binary, the number 15 is represented as 1111</p>
-            <div class="bits">
+            <div class="bits fragment" data-autoslide="15000">
               <span class="bit">1</span>
               <span class="bit">1</span>
               <span class="bit">1</span>
               <span class="bit">1</span>
-              <div class="caption fragment">
+              <div class="caption">
                 8 + 4 + 2 + 1 = 15
               </div>
             </div>
-            <p class="fragment spaced-out">In hex, the number 15 if represented by F</p>
-            <div class="bits fragment">
-              <span class="bit">F</span>
+            <div class="fragment">
+              <p class="spaced-out">In hex, the number 15 if represented by F</p>
+              <div class="bits">
+                <span class="bit">F</span>
+              </div>
             </div>
           </section>
 
-          <section>
+          <section data-autoslide="30000">
             <p>By splitting up binary into groups of 4 bits, you can convert that group into hex by adding the values of the bits ...</p>
             <div class="consecutive-bits">
               <div class="bits">
@@ -104,7 +109,7 @@
                 </div>
               </div>
             </div>
-            <div class="fragment">
+            <div class="fragment" data-autoslide="15000">
               <p class="spaced-out">... and then joining them back together.</p>
               <div class="bits">
                 <span class="bit">F</span>
@@ -124,14 +129,15 @@
           </aside>
         </section>
 
-        <!-- bytes vs words -->
+        <!-- bytes vs words
 				<section>
         </section>
+        -->
 
         <!-- pointers -->
 				<section>
           <h1 class="small-header">Pointers</h1>
-          <section>
+          <section data-autoslide="20000">
             <p>A pointer is a piece of memory that holds the address of a value, and not the value itself.</p>
             <div class="bits bits-pointer">
               <span class="bit">07</span>
@@ -161,7 +167,7 @@
             <p class="fragment spaced-out">This can be useful when a program is not sure what the actual address of a value will be until runtime.</p>
           </section>
 
-          <section>
+          <section data-autoslide="20000">
             <p>Sometimes pointers hold the addresses of other pointers. These are called pointer chains.</p>
             <div class="bits bits-pointer">
               <span class="bit">07</span>
@@ -214,9 +220,9 @@
           <h1 class="small-header">Registers</h1>
 
           <!-- what's a regiater -->
-          <section>
+          <section data-autoslide="12000">
             <p>In assembly code you can't save values to variables, so arguments to functions are stored and passed around in registers.</p>
-            <p class="spaced-out">What's a register? It's a special piece of memory that's only big enough to store 4 bytes of data, but the processor can access it <b>really</b> quickly.</p>
+            <p class="fragment spaced-out" data-autoslide="12000">What's a register? It's a special piece of memory that's only big enough to store 4 bytes of data, but the processor can access it <b>really</b> quickly.</p>
           </section>
 
           <!-- register names -->
@@ -247,10 +253,14 @@
 				<section>
           <h1 class="small-header">Assembly</h1>
 
+          <section>
+            <h2>Assembly Code Essentials</h2>
+          </section>
+
           <!-- overview -->
           <section>
             <p>Assembly code is a list of instructions that tell the computer exactly what it needs to do to complete a program.</p>
-            <p class="fragment spaced-out">Each instruction is very specific, and only only has a few operands.</p>
+            <p class="fragment spaced-out">Each instruction is very specific, and only has a few operands.</p>
             <p class="fragment spaced-out">Taken one step at a time, it's possible to follow the code exactly as the computer would execute it.</p>
           </section>
 
@@ -293,7 +303,7 @@
               <div class="fragment current-visible highlight-bits register">
                 <p>These bits indicate which register is being added to.</p>
               </div>
-              <div class="fragment highlight-bits constant">
+              <div class="fragment current-visible highlight-bits constant">
                 <p>And these bits are the value being added.</p>
               </div>
             </div>
@@ -312,19 +322,19 @@
           <section>
             <p class="small">There are 4 ways to provide arguments to assembly instructions:</p>
             <ul class="arguments">
-              <li class="argument">
+              <li class="fragment argument">
                 <code>add EAX,<span class="highlight-code">1</span></code>
                 <p class="description">constants - these can be addresses or values of any type.</p>
               </li>
-              <li class="argument">
+              <li class="fragment argument">
                 <code>add EAX,<span class="highlight-code">EBX</span></code>
                 <p class="description">registers - the value currently in register EBX is used.</p>
               </li>
-              <li class="argument">
+              <li class="fragment argument">
                 <code>add EAX,<span class="highlight-code">[EBX]</span></code>
                 <p class="description">addressing - the value in memory at the address in register EBX is used.</p>
               </li>
-              <li class="argument">
+              <li class="fragment argument">
                 <code>add EAX,<span class="highlight-code">[EBX+C]</span></code>
                 <p class="description">address displacement - add C to the address in register EBX and use what is stored in memory there.</p>
               </li>
@@ -340,7 +350,7 @@
           <h1 class="small-header">Need to Know Instructions</h1>
 
           <!-- arithmetic -->
-          <section>
+          <section data-autoslide="30000">
             <h2>Arithmetic</h2>
             <div class="instruction">
              <code>INC operand</code>operand += 1
@@ -366,7 +376,7 @@
           </section>
 
           <!-- memory management -->
-          <section>
+          <section data-autoslide="30000">
             <h2>Memory Management</h2>
             <div class="instruction">
               <code>MOV destination, operand</code>copies operand value to destination
@@ -389,7 +399,7 @@
           </section>
 
           <!-- jumps -->
-          <section>
+          <section data-autoslide="30000">
             <h2>Jumps</h2>
             <div class="instruction">
               <code>JMP destination</code>jumps execution to address or label
@@ -418,7 +428,7 @@
         -->
 
         <!-- references -->
-				<section>
+				<section data-autoslide="12000">
           <h1 class="small-header">References</h1>
           <section>
             <ul class="references">
@@ -449,7 +459,10 @@
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+        progress: false,
 				history: true,
+        loop: true,
+        autoSlide: 10000,  
 
         transition: 'fade',
 
